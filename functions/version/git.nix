@@ -11,7 +11,7 @@
       };
     }
 
-    (lib.mkIf config.thattem-nixos.special.enable {
+    (lib.mkIf config.thattem.nixos.special.enable {
 
       programs.git = {
         signing = {
@@ -21,11 +21,11 @@
         };
         settings = {
           user = {
-            name = config.private.git.userName;
-            email = config.private.git.userEmail;
+            name = config.thattem.private.git.userName;
+            email = config.thattem.private.git.userEmail;
           };
           pull.rebase = true;
-          github.user = config.private.git.githubUser;
+          github.user = config.thattem.private.git.githubUser;
         };
       };
     })

@@ -10,7 +10,7 @@ with lib.hm.gvariant;
 
 let
 
-  wallpapers = config.thattem-packages.wallpapers;
+  wallpapers = config.thattem.packages.wallpapers;
 
 in
 

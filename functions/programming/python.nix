@@ -2,7 +2,7 @@
 
 let
 
-  python-lsp = config.thattem-packages.python-lsp;
+  python-lsp = config.thattem.packages.python-lsp;
 
 in
 

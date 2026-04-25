@@ -35,9 +35,7 @@
                 config = {
                   home.username = nixosConfig.users.users.thattemperature.name;
                   home.homeDirectory = nixosConfig.users.users.thattemperature.home;
-                  thattem-nixos = nixosConfig.thattem-nixos;
-                  thattem-packages = nixosConfig.thattem-packages;
-                  private = nixosConfig.private;
+                  thattem = nixosConfig.thattem;
                 };
               };
             home-manager.users.programmer =
@@ -50,9 +48,7 @@
                 config = {
                   home.username = nixosConfig.users.users.programmer.name;
                   home.homeDirectory = nixosConfig.users.users.programmer.home;
-                  thattem-nixos = nixosConfig.thattem-nixos;
-                  thattem-packages = nixosConfig.thattem-packages;
-                  private = nixosConfig.private;
+                  thattem = nixosConfig.thattem;
                 };
               };
           };
