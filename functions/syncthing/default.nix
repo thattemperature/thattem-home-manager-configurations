@@ -1,5 +1,4 @@
 {
-  nixosConfig,
   config,
   lib,
   ...
@@ -59,8 +58,7 @@
         };
         guiCredentials = {
           username = "thattemperature";
-          # Workaround
-          passwordFile = nixosConfig.age.secrets.syncthing-password.path;
+          passwordFile = config.thattem.secrets.passwords.syncthing.path;
         };
       };
     })

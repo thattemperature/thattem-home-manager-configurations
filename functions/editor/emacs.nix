@@ -1,5 +1,4 @@
 {
-  nixosConfig,
   config,
   pkgs,
   ...
@@ -15,8 +14,7 @@
       epkgs: with epkgs.thattemPackages; [
         (thattem-emacs-init.override (
           if config.thattem.nixos.special.enable then
-            # Workaround
-            { special-auth-source = nixosConfig.age.secrets.".authinfo".path; }
+            { special-auth-source = config.thattem.secrets.authinfo.path; }
           else
             { }
         ))
