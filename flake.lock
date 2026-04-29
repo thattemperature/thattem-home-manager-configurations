@@ -2,14 +2,16 @@
   "nodes": {
     "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "nixpkgs"
+        ]
       },
       "locked": {
-        "lastModified": 1777086106,
-        "narHash": "sha256-hlNpIN18pw3xo34Lsrp6vAMUPn0aB/zFBqL0QXI1Pmk=",
+        "lastModified": 1777434174,
+        "narHash": "sha256-KwTyQ5g2qDhWIs/O6vH8HeF8n4JCzZIT/VYE7nYnukQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "5826802354a74af18540aef0b01bc1320f82cc17",
+        "rev": "d3b4e4b1bd59aedd3d4eb0a8df7162edb6da4607",
         "type": "github"
       },
       "original": {
@@ -20,11 +22,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1775423009,
-        "narHash": "sha256-vPKLpjhIVWdDrfiUM8atW6YkIggCEKdSAlJPzzhkQlw=",
+        "lastModified": 1777268161,
+        "narHash": "sha256-bxrdOn8SCOv8tN4JbTF/TXq7kjo9ag4M+C8yzzIRYbE=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "68d8aa3d661f0e6bd5862291b5bb263b2a6595c9",
+        "rev": "1c3fe55ad329cbcb28471bb30f05c9827f724c76",
         "type": "github"
       },
       "original": {
@@ -37,16 +39,35 @@
     "root": {
       "inputs": {
         "home-manager": "home-manager",
-        "thattem-options": "thattem-options"
+        "nixpkgs": "nixpkgs",
+        "thattem-home-manager-options": "thattem-home-manager-options"
       }
     },
-    "thattem-options": {
+    "thattem-home-manager-options": {
+      "inputs": {
+        "thattem-nixos-options": "thattem-nixos-options"
+      },
       "locked": {
-        "lastModified": 1777119074,
-        "narHash": "sha256-J7u/V5hTdAcbhBrR8LPBGtro1PuzfcqstsenfVMORas=",
+        "lastModified": 1777474620,
+        "narHash": "sha256-W9mcr3Xq9tV+MJFz1u2V5FPPST7w8PQMKeaXaI37lPk=",
+        "owner": "thattemperature",
+        "repo": "thattem-home-manager-options",
+        "rev": "c618bb0aad80585c3deb5794be7a25b4a2a91c5f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "thattemperature",
+        "repo": "thattem-home-manager-options",
+        "type": "github"
+      }
+    },
+    "thattem-nixos-options": {
+      "locked": {
+        "lastModified": 1777390272,
+        "narHash": "sha256-i4RqHOddV3sapa7zFSbWPMu6apK8dFf7EsxKdWRhW5I=",
         "owner": "thattemperature",
         "repo": "thattem-nixos-options",
-        "rev": "8ed5f3ff23098f998c094f8ca1e409419237fa25",
+        "rev": "b76a8e5481508380d9bd6384b14c4a71221794d4",
         "type": "github"
       },
       "original": {

@@ -3,15 +3,19 @@
   description = "Thattemperature's home-manager configurations";
 
   inputs = {
-    home-manager.url = "github:nix-community/home-manager";
-    thattem-options.url = "github:thattemperature/thattem-nixos-options";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
+    home-manager = {
+      url = "github:nix-community/home-manager";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    thattem-home-manager-options.url = "github:thattemperature/thattem-home-manager-options";
   };
 
   outputs =
     {
       self,
       home-manager,
-      thattem-options,
+      thattem-home-manager-options,
       ...
     }:
 
@@ -29,7 +33,7 @@
               { nixosConfig, ... }:
               {
                 imports = [
-                  thattem-options.nixosModules.default
+                  thattem-home-manager-options.nixosModules.default
                   ./users/thattemperature
                 ];
                 config = {
@@ -42,7 +46,7 @@
               { nixosConfig, ... }:
               {
                 imports = [
-                  thattem-options.nixosModules.default
+                  thattem-home-manager-options.nixosModules.default
                   ./users/programmer
                 ];
                 config = {
