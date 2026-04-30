@@ -8,6 +8,7 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    thattem-nixpkgs-overlays.url = "github:thattemperature/thattem-nixpkgs-overlays";
     thattem-home-manager-options.url = "github:thattemperature/thattem-home-manager-options";
   };
 
@@ -15,6 +16,7 @@
     {
       self,
       home-manager,
+      thattem-nixpkgs-overlays,
       thattem-home-manager-options,
       ...
     }:
@@ -45,8 +47,9 @@
                 (nixos-modules-user-wrapper "thattemperature")
 
                 (lib.mkIf config.thattem.nixos.programming.enable (nixos-modules-user-wrapper "programmer"))
-              ];
 
+              ];
+              nixpkgs.overlays = [ thattem-nixpkgs-overlays.overlays.default ];
             };
           };
 
