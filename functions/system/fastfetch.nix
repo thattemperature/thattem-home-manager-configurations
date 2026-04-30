@@ -1,5 +1,10 @@
+{ config, lib, ... }:
+
 {
 
-  programs.fastfetch.enable = true;
+  config = lib.mkIf config.thattem.home-manager.system.enable {
+
+    programs.fastfetch.enable = true;
+  };
 
 }

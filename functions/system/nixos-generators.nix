@@ -1,9 +1,19 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    nixos-generators
-  ];
+  config = lib.mkIf config.thattem.nixos.advanced.enable (
+    lib.mkIf config.thattem.home-manager.system.enable {
+
+      home.packages = with pkgs; [
+        nixos-generators
+      ];
+    }
+  );
 
 }

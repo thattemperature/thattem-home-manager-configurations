@@ -1,19 +1,26 @@
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
 
-{ lib, ... }:
+{ config, lib, ... }:
 
 with lib.hm.gvariant;
 
 {
-  dconf.settings = {
-    "org/gnome/shell/extensions/caffeine" = {
-      enable-fullscreen = false;
-      nightlight-control = "never";
-      screen-blank = "never";
-      show-indicator = "only-active";
-      show-notifications = false;
-      show-timer = false;
-    };
 
-  };
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
+
+      dconf.settings = {
+        "org/gnome/shell/extensions/caffeine" = {
+          enable-fullscreen = false;
+          nightlight-control = "never";
+          screen-blank = "never";
+          show-indicator = "only-active";
+          show-notifications = false;
+          show-timer = false;
+        };
+
+      };
+    }
+  );
+
 }

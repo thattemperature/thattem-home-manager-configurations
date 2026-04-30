@@ -1,4 +1,4 @@
-{ config, ... }:
+{ config, lib, ... }:
 
 let
 
@@ -8,24 +8,29 @@ in
 
 {
 
-  xdg.userDirs = {
-    enable = true;
-    createDirectories = true;
-    setSessionVariables = true;
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
 
-    desktop = "${home}/Desktop";
-    documents = "${home}/Documents";
-    download = "${home}/Downloads";
-    music = "${home}/Music";
-    pictures = "${home}/Pictures";
-    publicShare = "${home}/Public";
-    templates = "${home}/Templates";
-    videos = "${home}/Videos";
-    extraConfig = {
-      GAMES = "${home}/Games";
-      PROJECTS = "${home}/Projects";
-      SYNC = "${home}/Sync";
-    };
-  };
+      xdg.userDirs = {
+        enable = true;
+        createDirectories = true;
+        setSessionVariables = true;
+
+        desktop = "${home}/Desktop";
+        documents = "${home}/Documents";
+        download = "${home}/Downloads";
+        music = "${home}/Music";
+        pictures = "${home}/Pictures";
+        projects = "${home}/Projects";
+        publicShare = "${home}/Public";
+        templates = "${home}/Templates";
+        videos = "${home}/Videos";
+        extraConfig = {
+          GAMES = "${home}/Games";
+          SYNC = "${home}/Sync";
+        };
+      };
+    }
+  );
 
 }

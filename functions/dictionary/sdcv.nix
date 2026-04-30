@@ -11,14 +11,23 @@ let
 
 in
 
-lib.mkIf (stardicts != null) {
+{
 
-  home.packages = with pkgs; [
-    sdcv
-  ];
+  config = lib.mkIf config.thattem.nixos.programming.enable (
+    lib.mkIf config.thattem.home-manager.dictionary.enable (
 
-  home.file.".stardict/dic/" = {
-    source = config.lib.file.mkOutOfStoreSymlink "${stardicts}/share/stardict/dic/";
-  };
+      lib.mkIf (stardicts != null) {
+
+        home.packages = with pkgs; [
+          sdcv
+        ];
+
+        home.file.".stardict/dic/" = {
+          source = config.lib.file.mkOutOfStoreSymlink "${stardicts}/share/stardict/dic/";
+        };
+
+      }
+    )
+  );
 
 }

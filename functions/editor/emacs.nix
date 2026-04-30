@@ -1,28 +1,34 @@
 {
   config,
+  lib,
   pkgs,
   ...
 }:
 
 {
 
-  programs.emacs = {
-    enable = true;
-    package = pkgs.emacs-pgtk;
+  config = lib.mkIf config.thattem.nixos.programming.enable (
+    lib.mkIf config.thattem.home-manager.editor.enable {
 
-    extraPackages =
-      epkgs: with epkgs.thattemPackages; [
-        (thattem-emacs-init.override (
-          if config.thattem.nixos.special.enable then
-            { special-auth-source = config.thattem.secrets.authinfo.path; }
-          else
-            { }
-        ))
-      ];
+      programs.emacs = {
+        enable = true;
+        package = pkgs.emacs-pgtk;
 
-    extraConfig = ''
-      (use-package thattem-emacs-init)
-    '';
-  };
+        extraPackages =
+          epkgs: with epkgs.thattemPackages; [
+            (thattem-emacs-init.override (
+              if config.thattem.nixos.special.enable then
+                { special-auth-source = config.thattem.secrets.authinfo.path; }
+              else
+                { }
+            ))
+          ];
+
+        extraConfig = ''
+          (use-package thattem-emacs-init)
+        '';
+      };
+    }
+  );
 
 }

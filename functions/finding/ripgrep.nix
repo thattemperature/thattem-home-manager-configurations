@@ -1,5 +1,10 @@
+{ config, lib, ... }:
+
 {
 
-  programs.ripgrep.enable = true;
+  config = lib.mkIf config.thattem.home-manager.finding.enable {
+
+    programs.ripgrep.enable = true;
+  };
 
 }

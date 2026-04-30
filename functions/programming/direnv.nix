@@ -1,12 +1,15 @@
+{ config, lib, ... }:
+
 {
 
-  programs = {
+  config = lib.mkIf config.thattem.nixos.programming.enable (
+    lib.mkIf config.thattem.home-manager.programming.enable {
 
-    direnv = {
-      enable = true;
-      nix-direnv.enable = true;
-    };
-
-  };
+      programs.direnv = {
+        enable = true;
+        nix-direnv.enable = true;
+      };
+    }
+  );
 
 }

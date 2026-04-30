@@ -1,9 +1,17 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    unrar-free
-  ];
+  config = lib.mkIf config.thattem.home-manager.compression.enable {
+
+    home.packages = with pkgs; [
+      unrar-free
+    ];
+  };
 
 }

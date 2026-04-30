@@ -2,17 +2,23 @@
 
   imports = [
     ../../basic
-    ../../functions/browser
-    ../../functions/compression
-    ../../functions/connecting
-    ../../functions/desktop
-    ../../functions/dictionary
-    ../../functions/documenting
-    ../../functions/editor
-    ../../functions/finding
-    ../../functions/programming
-    ../../functions/shell
-    ../../functions/version
+    ../../functions
   ];
+
+  config = {
+    thattem.home-manager = {
+      browser.enable = true;
+      compression.enable = true;
+      connecting.enable = true;
+      desktop.enable = true;
+      dictionary.enable = true;
+      documenting.enable = true;
+      editor.enable = true;
+      finding.enable = true;
+      programming.enable = true;
+      shell.enable = true;
+      version.enable = true;
+    };
+  };
 
 }

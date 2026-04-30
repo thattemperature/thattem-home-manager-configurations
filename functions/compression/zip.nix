@@ -1,10 +1,18 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    zip
-    unzip
-  ];
+  config = lib.mkIf config.thattem.home-manager.compression.enable {
+
+    home.packages = with pkgs; [
+      zip
+      unzip
+    ];
+  };
 
 }

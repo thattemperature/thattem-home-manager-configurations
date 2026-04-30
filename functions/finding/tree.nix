@@ -1,9 +1,17 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    tree
-  ];
+  config = lib.mkIf config.thattem.home-manager.finding.enable {
+
+    home.packages = with pkgs; [
+      tree
+    ];
+  };
 
 }

@@ -1,23 +1,30 @@
 # Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
 
-{ lib, ... }:
+{ config, lib, ... }:
 
 with lib.hm.gvariant;
 
 {
-  dconf.settings = {
-    "org/gnome/desktop/input-sources" = {
-      mru-sources = [ ];
-      per-window = false;
-      show-all-sources = false;
-      sources = [
-        (mkTuple [
-          "ibus"
-          "rime"
-        ])
-      ];
-      xkb-options = [ ];
-    };
 
-  };
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
+
+      dconf.settings = {
+        "org/gnome/desktop/input-sources" = {
+          mru-sources = [ ];
+          per-window = false;
+          show-all-sources = false;
+          sources = [
+            (mkTuple [
+              "ibus"
+              "rime"
+            ])
+          ];
+          xkb-options = [ ];
+        };
+
+      };
+    }
+  );
+
 }

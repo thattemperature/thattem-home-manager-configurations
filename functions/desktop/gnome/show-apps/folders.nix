@@ -1,14 +1,21 @@
 # Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
-{ lib, ... }:
+{ config, lib, ... }:
 
 with lib.hm.gvariant;
 
 {
-  dconf.settings = {
-    "org/gnome/desktop/app-folders" = {
-      folder-children = [ ];
-    };
 
-  };
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
+
+      dconf.settings = {
+        "org/gnome/desktop/app-folders" = {
+          folder-children = [ ];
+        };
+
+      };
+    }
+  );
+
 }

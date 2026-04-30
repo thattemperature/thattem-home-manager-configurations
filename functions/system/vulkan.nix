@@ -1,9 +1,19 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    vulkan-tools
-  ];
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.system.enable {
+
+      home.packages = with pkgs; [
+        vulkan-tools
+      ];
+    }
+  );
 
 }

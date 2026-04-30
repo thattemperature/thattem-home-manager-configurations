@@ -1,5 +1,10 @@
+{ config, lib, ... }:
+
 {
 
-  programs.fd.enable = true;
+  config = lib.mkIf config.thattem.home-manager.finding.enable {
+
+    programs.fd.enable = true;
+  };
 
 }

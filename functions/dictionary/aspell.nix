@@ -1,10 +1,20 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    aspell
-    aspellDicts.en
-  ];
+  config = lib.mkIf config.thattem.nixos.programming.enable (
+    lib.mkIf config.thattem.home-manager.dictionary.enable {
+
+      home.packages = with pkgs; [
+        aspell
+        aspellDicts.en
+      ];
+    }
+  );
 
 }

@@ -1,5 +1,10 @@
+{ config, lib, ... }:
+
 {
 
-  programs.fish.enable = true;
+  config = lib.mkIf config.thattem.home-manager.shell.enable {
+
+    programs.fish.enable = true;
+  };
 
 }

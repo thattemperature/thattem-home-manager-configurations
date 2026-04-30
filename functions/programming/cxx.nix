@@ -1,14 +1,24 @@
-{ pkgs, ... }:
+{
+  config,
+  lib,
+  pkgs,
+  ...
+}:
 
 {
 
-  home.packages = with pkgs; [
-    llvmPackages.clang-tools
-  ];
+  config = lib.mkIf config.thattem.nixos.programming.enable (
+    lib.mkIf config.thattem.home-manager.programming.enable {
 
-  home.extraDependencies = with pkgs; [
-    cmake
-    pkg-config
-  ];
+      home.packages = with pkgs; [
+        llvmPackages.clang-tools
+      ];
+
+      home.extraDependencies = with pkgs; [
+        cmake
+        pkg-config
+      ];
+    }
+  );
 
 }

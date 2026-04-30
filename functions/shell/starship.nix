@@ -1,3 +1,5 @@
+{ config, lib, ... }:
+
 let
 
   nerd-icons = fromTOML (builtins.readFile ./starship-presets/nerd-font-symbols.toml);
@@ -7,18 +9,21 @@ in
 
 {
 
-  programs.starship = {
-    enable = true;
-    settings = {
-      env_var.STARSHIP_SHELL = {
-        default = "unknown";
-        format = "[ $env_value](blue bold) ";
-      };
+  config = lib.mkIf config.thattem.home-manager.shell.enable {
 
-      palette = "catppuccin_latte";
-    }
-    // nerd-icons
-    // latte;
+    programs.starship = {
+      enable = true;
+      settings = {
+        env_var.STARSHIP_SHELL = {
+          default = "unknown";
+          format = "[ $env_value](blue bold) ";
+        };
+
+        palette = "catppuccin_latte";
+      }
+      // nerd-icons
+      // latte;
+    };
   };
 
 }

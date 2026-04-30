@@ -19,44 +19,36 @@
       ...
     }:
 
+    let
+
+      nixos-modules-user-wrapper = import ./lib/nixos-modules-user-wrapper.nix {
+        options-module = thattem-home-manager-options.nixosModules.default;
+        users-path = ./users;
+      };
+
+    in
+
     {
       nixosModules = {
 
-        default = {
-          imports = [
-            home-manager.nixosModules.default
-          ];
-          config = {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users.thattemperature =
-              { nixosConfig, ... }:
-              {
-                imports = [
-                  thattem-home-manager-options.nixosModules.default
-                  ./users/thattemperature
-                ];
-                config = {
-                  home.username = nixosConfig.users.users.thattemperature.name;
-                  home.homeDirectory = nixosConfig.users.users.thattemperature.home;
-                  thattem = nixosConfig.thattem;
-                };
-              };
-            home-manager.users.programmer =
-              { nixosConfig, ... }:
-              {
-                imports = [
-                  thattem-home-manager-options.nixosModules.default
-                  ./users/programmer
-                ];
-                config = {
-                  home.username = nixosConfig.users.users.programmer.name;
-                  home.homeDirectory = nixosConfig.users.users.programmer.home;
-                  thattem = nixosConfig.thattem;
-                };
-              };
+        default =
+          { config, lib, ... }:
+          {
+            imports = [
+              home-manager.nixosModules.default
+            ];
+            config = {
+              home-manager.useGlobalPkgs = true;
+              home-manager.useUserPackages = true;
+              home-manager.users = lib.mkMerge [
+
+                (nixos-modules-user-wrapper "thattemperature")
+
+                (lib.mkIf config.thattem.nixos.programming.enable (nixos-modules-user-wrapper "programmer"))
+              ];
+
+            };
           };
-        };
 
       };
     };

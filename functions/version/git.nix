@@ -2,33 +2,37 @@
 
 {
 
-  config = lib.mkMerge [
-    {
-      programs.git.enable = true;
-      programs.delta = {
-        enable = true;
-        enableGitIntegration = true;
-      };
-    }
+  config = lib.mkIf config.thattem.home-manager.version.enable (
+    lib.mkMerge [
 
-    (lib.mkIf config.thattem.nixos.special.enable {
-
-      programs.git = {
-        signing = {
-          format = "ssh";
-          key = "~/.ssh/id_ed25519.pub";
-          signByDefault = true;
+      {
+        programs.git.enable = true;
+        programs.delta = {
+          enable = true;
+          enableGitIntegration = true;
         };
-        settings = {
-          user = {
-            name = config.thattem.private.git.userName;
-            email = config.thattem.private.git.userEmail;
+      }
+
+      (lib.mkIf config.thattem.nixos.special.enable {
+
+        programs.git = {
+          signing = {
+            format = "ssh";
+            key = "~/.ssh/id_ed25519.pub";
+            signByDefault = true;
           };
-          pull.rebase = true;
-          github.user = config.thattem.private.git.githubUser;
+          settings = {
+            user = {
+              name = config.thattem.private.git.userName;
+              email = config.thattem.private.git.userEmail;
+            };
+            pull.rebase = true;
+            github.user = config.thattem.private.git.githubUser;
+          };
         };
-      };
-    })
-  ];
+      })
+
+    ]
+  );
 
 }

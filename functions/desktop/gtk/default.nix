@@ -1,3 +1,5 @@
+{ config, lib, ... }:
+
 {
 
   imports = [
@@ -7,6 +9,11 @@
     ./theme.nix
   ];
 
-  gtk.enable = true;
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
+
+      gtk.enable = true;
+    }
+  );
 
 }

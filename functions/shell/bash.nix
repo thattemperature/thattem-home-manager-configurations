@@ -1,5 +1,10 @@
+{ config, lib, ... }:
+
 {
 
-  programs.bash.enable = true;
+  config = lib.mkIf config.thattem.home-manager.shell.enable {
+
+    programs.bash.enable = true;
+  };
 
 }
