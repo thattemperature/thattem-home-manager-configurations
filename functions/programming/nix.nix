@@ -25,6 +25,7 @@
         }))
         nixd
         nixfmt
+        nix-prefetch-github
       ];
     }
   );
