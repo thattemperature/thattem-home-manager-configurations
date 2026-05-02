@@ -11,7 +11,8 @@
     lib.mkIf config.thattem.home-manager.media.enable {
 
       home.packages = with pkgs; [
-        animeko
+        # Workaround: broken package
+        # animeko
       ];
     }
   );
