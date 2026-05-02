@@ -49,11 +49,11 @@
         "thattem-nixos-options": "thattem-nixos-options"
       },
       "locked": {
-        "lastModified": 1777518172,
-        "narHash": "sha256-2Khsk0JhJNZ4LIQzv28a+m+uJvKkKBZOjHhZUOevBXU=",
+        "lastModified": 1777714413,
+        "narHash": "sha256-y6MB2tVw3YpddBw0SXSGcJcugwXTHkZiGa4m6SKqkOc=",
         "owner": "thattemperature",
         "repo": "thattem-home-manager-options",
-        "rev": "ace5943207cfcda0b76ed8ab4fba52dd8c51c8aa",
+        "rev": "8ae6402c60c2d386f9d41fc6ae1a1a3e5ed1dbb0",
         "type": "github"
       },
       "original": {
@@ -64,11 +64,11 @@
     },
     "thattem-nixos-options": {
       "locked": {
-        "lastModified": 1777390272,
-        "narHash": "sha256-i4RqHOddV3sapa7zFSbWPMu6apK8dFf7EsxKdWRhW5I=",
+        "lastModified": 1777713665,
+        "narHash": "sha256-GbwsDyNiHkoJCiTfT0PqDz5D7Sp7PcGZeHLInwkWolY=",
         "owner": "thattemperature",
         "repo": "thattem-nixos-options",
-        "rev": "b76a8e5481508380d9bd6384b14c4a71221794d4",
+        "rev": "3d0baaa410d8b29cfb7172cd073c1119ab98bd00",
         "type": "github"
       },
       "original": {
