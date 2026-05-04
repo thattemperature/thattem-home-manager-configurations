@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -20,10 +20,10 @@ with lib.hm.gvariant;
           right-box-order = [
             "tiling-assistant@leleat-on-github"
             "screenRecording"
-            "extension-list@tu.berry"
             "screenSharing"
             "dwellClick"
             "a11y"
+            "extension-list@tu.berry"
             "keyboard"
             "appindicator-kstatusnotifieritem-tray-icon tray app main"
             "quickSettings"

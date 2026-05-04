@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -11,13 +11,13 @@ with lib.hm.gvariant;
 
       dconf.settings = {
         "org/gnome/shell/extensions/com/github/hermes83/compiz-windows-effect" = {
-          friction = 4.0;
-          mass = 50.0;
+          friction = mkDouble "4.0";
+          mass = mkDouble "50.0";
           resize-effect = true;
-          speedup-factor-divider = 12.0;
-          spring-k = 4.0;
-          x-tiles = 10.0;
-          y-tiles = 10.0;
+          speedup-factor-divider = mkDouble "12.0";
+          spring-k = mkDouble "4.0";
+          x-tiles = mkDouble "20.0";
+          y-tiles = mkDouble "20.0";
         };
 
       };

@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -12,7 +12,7 @@ with lib.hm.gvariant;
       dconf.settings = {
         "com/github/amezin/ddterm" = {
           background-color = "rgb(251,247,240)";
-          background-opacity = 0.75;
+          background-opacity = mkDouble "0.75";
           backspace-binding = "auto";
           bold-color = "rgb(64,0,128)";
           bold-color-same-as-fg = false;
@@ -25,7 +25,7 @@ with lib.hm.gvariant;
           ddterm-toggle-hotkey = [ ];
           delete-binding = "auto";
           foreground-color = "rgb(0,0,0)";
-          hide-animation-duration = 0.25;
+          hide-animation-duration = mkDouble "0.25";
           hide-when-focus-lost = true;
           hide-window-on-esc = true;
           highlight-background-color = "rgb(194,188,181)";
@@ -74,22 +74,23 @@ with lib.hm.gvariant;
           shortcut-window-size-dec = [ ];
           shortcut-window-size-inc = [ ];
           show-animation = "linear";
-          show-animation-duration = 0.25;
+          show-animation-duration = mkDouble "0.25";
           show-scrollbar = false;
           tab-close-buttons = true;
           tab-expand = false;
           tab-label-ellipsize-mode = "middle";
-          tab-label-width = 0.1;
+          tab-label-width = mkDouble "0.1";
           tab-policy = "always";
           tab-position = "right";
           tab-show-shortcuts = true;
           tab-switcher-popup = false;
           text-blink-mode = "always";
+          theme-variant = "system";
           use-system-font = false;
           use-theme-colors = false;
           window-maximize = false;
           window-resizable = false;
-          window-size = 0.75;
+          window-size = mkDouble "0.75";
         };
 
       };

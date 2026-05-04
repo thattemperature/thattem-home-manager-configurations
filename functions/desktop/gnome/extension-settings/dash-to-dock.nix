@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -12,12 +12,12 @@ with lib.hm.gvariant;
       dconf.settings = {
         "org/gnome/shell/extensions/dash-to-dock" = {
           always-center-icons = true;
-          animation-time = 0.3;
+          animation-time = mkDouble "0.3";
           apply-custom-theme = true;
           apply-glossy-effect = true;
           autohide-in-fullscreen = true;
           background-color = "rgb(154,153,150)";
-          background-opacity = 0.8;
+          background-opacity = mkDouble "0.8";
           click-action = "previews";
           custom-background-color = false;
           custom-theme-customize-running-dots = false;
@@ -28,16 +28,17 @@ with lib.hm.gvariant;
           dock-fixed = false;
           dock-position = "LEFT";
           extend-height = true;
-          height-fraction = 1.0;
-          hide-delay = 0.0;
+          height-fraction = mkDouble "1.0";
+          hide-delay = mkDouble "0.0";
+          icon-size-fixed = false;
           intellihide = false;
           intellihide-mode = "ALL_WINDOWS";
           isolate-monitors = true;
           isolate-workspaces = true;
-          max-alpha = 0.8;
+          max-alpha = mkDouble "0.8";
           middle-click-action = "launch";
           multi-monitor = true;
-          pressure-threshold = 400.0;
+          pressure-threshold = mkDouble "400.0";
           running-indicator-dominant-color = false;
           running-indicator-style = "DEFAULT";
           scroll-action = "switch-workspace";

@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -32,19 +32,19 @@ with lib.hm.gvariant;
           autotheme-font = false;
           autotheme-light = "Light";
           autotheme-refresh = false;
-          balpha = 0.85;
+          balpha = mkDouble "0.85";
           bartype = "Islands";
-          bgalpha = 0.0;
-          bgalpha-wmax = 1.0;
-          bgalpha2 = 0.5;
+          bgalpha = mkDouble "0.0";
+          bgalpha-wmax = mkDouble "1.0";
+          bgalpha2 = mkDouble "0.5";
           bgpalette = true;
           border-wmax = true;
           bordertype = "solid";
-          bottom-margin = 6.5;
-          boxalpha = 0.0;
-          bradius = 50.0;
+          bottom-margin = mkDouble "6.5";
+          boxalpha = mkDouble "0.0";
+          bradius = mkDouble "50.0";
           buttonbg-wmax = true;
-          bwidth = 1.5;
+          bwidth = mkDouble "1.5";
           candy1 = [
             "0"
             "0.61"
@@ -125,7 +125,7 @@ with lib.hm.gvariant;
             "0.20"
             "0.23"
           ];
-          candyalpha = 1.0;
+          candyalpha = mkDouble "1.0";
           candybar = false;
           card-hint = 10;
           corner-radius = false;
@@ -388,38 +388,38 @@ with lib.hm.gvariant;
             "0.302"
           ];
           dashdock-style = "Default";
-          dbgalpha = 0.85;
+          dbgalpha = mkDouble "0.85";
           dbgcolor = [
             "0.125"
             "0.125"
             "0.125"
           ];
           dborder = true;
-          dbradius = 100.0;
+          dbradius = mkDouble "100.0";
           destruct-color = [
             "0.75"
             "0.11"
             "0.16"
           ];
-          disize = 48.0;
+          disize = mkDouble "48.0";
           dshadow = true;
-          fgalpha = 1.0;
+          fgalpha = mkDouble "1.0";
           fitts-widgets = false;
           font = "Sarasa UI SC Semi-Bold 20";
           gradient = true;
           gradient-direction = "vertical";
           gtk-popover = false;
           gtk-shadow = "Default";
-          gtk-transparency = 1.0;
-          halpha = 0.5;
-          handle-border = 3.0;
+          gtk-transparency = mkDouble "1.0";
+          halpha = mkDouble "0.5";
+          handle-border = mkDouble "3.0";
           hbar-gtk3only = false;
           headerbar-hint = 0;
           heffect = false;
-          height = 48.0;
-          hpad = 1.0;
+          height = mkDouble "48.0";
+          hpad = mkDouble "1.0";
           import-export = false;
-          isalpha = 0.5;
+          isalpha = mkDouble "0.5";
           iscolor = [
             "0.863"
             "0.541"
@@ -670,20 +670,20 @@ with lib.hm.gvariant;
             "0.620"
             "0.765"
           ];
-          margin = 0.0;
-          margin-wmax = 0.0;
-          mbalpha = 0.6;
+          margin = mkDouble "0.0";
+          margin-wmax = mkDouble "0.0";
+          mbalpha = mkDouble "0.6";
           mbg-gradient = false;
-          mbgalpha = 0.85;
-          menu-radius = 21.0;
+          mbgalpha = mkDouble "0.85";
+          menu-radius = mkDouble "21.0";
           menustyle = true;
-          mfgalpha = 1.0;
-          mhalpha = 0.35;
+          mfgalpha = mkDouble "1.0";
+          mhalpha = mkDouble "0.35";
           monitor-height = 1440;
           monitor-width = 2560;
           monitors = "all";
-          msalpha = 0.85;
-          mshalpha = 0.16;
+          msalpha = mkDouble "0.85";
+          mshalpha = mkDouble "0.16";
           mshcolor = [
             "0.000"
             "0.000"
@@ -691,7 +691,7 @@ with lib.hm.gvariant;
           ];
           neon = true;
           neon-wmax = true;
-          notif-radius = 10.0;
+          notif-radius = mkDouble "10.0";
           palette1 = [
             "40"
             "64"
@@ -784,7 +784,7 @@ with lib.hm.gvariant;
             "100"
             "100"
           ];
-          qtoggle-radius = 50.0;
+          qtoggle-radius = mkDouble "50.0";
           radius-bottomleft = true;
           radius-bottomright = true;
           radius-topleft = true;
@@ -798,15 +798,15 @@ with lib.hm.gvariant;
           set-overview = false;
           set-yarutheme = false;
           shadow = false;
-          shalpha = 0.2;
+          shalpha = mkDouble "0.2";
           shcolor = [
             "0.000"
             "0.000"
             "0.000"
           ];
           sidebar-hint = 10;
-          slider-height = 4.0;
-          smbgalpha = 0.95;
+          slider-height = mkDouble "4.0";
+          smbgalpha = mkDouble "0.95";
           smbgoverride = true;
           success-color = [
             "0.15"
@@ -816,7 +816,7 @@ with lib.hm.gvariant;
           traffic-light = false;
           trigger-autotheme = false;
           view-hint = 0;
-          vpad = 4.0;
+          vpad = mkDouble "4.0";
           warning-color = [
             "0.96"
             "0.83"
@@ -826,9 +826,9 @@ with lib.hm.gvariant;
           width-left = true;
           width-right = true;
           width-top = true;
-          winbalpha = 0.75;
-          winbradius = 15.0;
-          winbwidth = 0.0;
+          winbalpha = mkDouble "0.75";
+          winbradius = mkDouble "15.0";
+          winbwidth = mkDouble "0.0";
           window-hint = 0;
           wmax-hbarhint = true;
           wmaxbar = true;

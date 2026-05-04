@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -11,7 +11,12 @@ with lib.hm.gvariant;
 
       dconf.settings = {
         "org/gnome/desktop/input-sources" = {
-          mru-sources = [ ];
+          mru-sources = [
+            (mkTuple [
+              "ibus"
+              "rime"
+            ])
+          ];
           per-window = false;
           show-all-sources = false;
           sources = [

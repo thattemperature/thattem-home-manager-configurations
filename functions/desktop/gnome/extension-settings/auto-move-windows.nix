@@ -1,4 +1,4 @@
-# Generated via dconf2nix: https://github.com/gvolpe/dconf2nix
+# Generated via dconf2nix: https://github.com/nix-community/dconf2nix
 
 { config, lib, ... }:
 
@@ -37,7 +37,6 @@ with lib.hm.gvariant;
             "wechat.desktop:4"
 
             "HMCL.desktop:5"
-            "net.lutris.Lutris.desktop:5"
             "org.luanti.luanti.desktop:5"
             "steam.desktop:5"
 
