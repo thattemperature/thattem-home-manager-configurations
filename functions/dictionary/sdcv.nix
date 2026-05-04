@@ -20,10 +20,11 @@ in
 
         home.packages = with pkgs; [
           sdcv
+          stardicts
         ];
 
-        home.file.".stardict/dic/" = {
-          source = config.lib.file.mkOutOfStoreSymlink "${stardicts}/share/stardict/dic/";
+        home.sessionVariables = {
+          STARDICT_DATA_DIR = "${stardicts}/share/stardict";
         };
 
       }
