@@ -23,7 +23,7 @@ in
         dconf.settings = {
           "org/gnome/desktop/background" = {
             picture-uri = "file://${wallpapers}/share/backgrounds/thattem/FA-18C.png";
-            picture-uri-dark = "file://${wallpapers}/share/backgrounds/thattem/FA-18C.png";
+            picture-uri-dark = "file://${wallpapers}/share/backgrounds/thattem/FA-18C_RisingSquall.png";
           };
 
         };
