@@ -17,7 +17,7 @@ with lib.hm.gvariant;
               "rime"
             ])
           ];
-          per-window = false;
+          per-window = true;
           show-all-sources = false;
           sources = [
             (mkTuple [
