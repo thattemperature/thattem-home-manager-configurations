@@ -12,33 +12,40 @@
       enable = true;
       # Workaround: A temporary option which will be removed in the future
       enableDefaultConfig = false;
-      matchBlocks = {
+      settings = {
 
-        default = {
-          match = "all";
-          compression = false;
-          controlMaster = "auto";
-          controlPath = "~/.ssh/master-%r@%n:%p";
-          controlPersist = "no";
-          hashKnownHosts = false;
-          serverAliveCountMax = 4;
-          serverAliveInterval = 15;
-          userKnownHostsFile = "~/.ssh/known_hosts";
+        "Match all" = {
+          Compression = false;
+          ControlMaster = "auto";
+          ControlPath = "~/.ssh/master-%r@%n:%p";
+          ControlPersist = "no";
+          HashKnownHosts = false;
+          ServerAliveCountMax = 4;
+          ServerAliveInterval = 15;
+          UserKnownHostsFile = "~/.ssh/known_hosts";
         };
 
-        github = lib.hm.dag.entryBefore [ "default" ] {
-          match = "host github.com";
-          hostname = "ssh.github.com";
-          port = 443;
-          user = "git";
-        };
+        "Match host github.com" =
+          lib.hm.dag.entryBefore
+            [
+              "Match all"
+            ]
+            {
+              HostName = "ssh.github.com";
+              Port = 443;
+              User = "git";
+            };
 
-        gitlab = lib.hm.dag.entryBefore [ "default" ] {
-          match = "host gitlab.com";
-          hostname = "altssh.gitlab.com";
-          port = 443;
-          user = "git";
-        };
+        "Match host gitlab.com" =
+          lib.hm.dag.entryBefore
+            [
+              "Match all"
+            ]
+            {
+              HostName = "altssh.gitlab.com";
+              Port = 443;
+              User = "git";
+            };
       };
     };
   };
