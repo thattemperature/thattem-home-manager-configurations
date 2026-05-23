@@ -63,9 +63,17 @@ with lib.hm.gvariant;
           shortcut-font-scale-reset = [ ];
           shortcut-move-tab-next = [ ];
           shortcut-move-tab-prev = [ ];
-          shortcut-next-tab = [ "<Shift><Control>f" ];
+          shortcut-next-tab = [
+            "<Control>Tab"
+            "<Shift><Control>f"
+          ];
           shortcut-page-close = [ "<Shift><Control>k" ];
-          shortcut-prev-tab = [ "<Shift><Control>b" ];
+          shortcut-prev-tab = [
+            "<Shift><Control>Tab"
+            "<Shift><Control>b"
+          ];
+          shortcut-terminal-copy = [ "<Alt>w" ];
+          shortcut-terminal-paste = [ "<Control>y" ];
           shortcut-terminal-reset = [ ];
           shortcut-terminal-reset-and-clear = [ ];
           shortcut-toggle-maximize = [ ];
@@ -77,11 +85,11 @@ with lib.hm.gvariant;
           show-animation-duration = mkDouble "0.25";
           show-scrollbar = false;
           tab-close-buttons = true;
-          tab-expand = false;
+          tab-expand = true;
           tab-label-ellipsize-mode = "middle";
           tab-label-width = mkDouble "0.1";
           tab-policy = "always";
-          tab-position = "right";
+          tab-position = "top";
           tab-show-shortcuts = true;
           tab-switcher-popup = false;
           text-blink-mode = "always";
