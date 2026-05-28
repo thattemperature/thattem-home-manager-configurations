@@ -15,6 +15,7 @@ with lib.hm.gvariant;
           clock-show-weekday = true;
           document-font-name = "Sarasa UI SC 16";
           font-name = "Sarasa UI SC 16";
+          gtk-enable-primary-paste = true;
           monospace-font-name = "Sarasa Mono SC 16";
         };
 
