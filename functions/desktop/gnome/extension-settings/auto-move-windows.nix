@@ -31,6 +31,7 @@ with lib.hm.gvariant;
             "org.gnome.baobab.desktop:3"
             "org.gnome.tweaks.desktop:3"
 
+            "discord.desktop:4"
             "element-desktop.desktop:4"
             "org.telegram.desktop.desktop:4"
             "qq.desktop:4"

@@ -178,7 +178,7 @@ with lib.hm.gvariant;
             ]
             [
               (mkDictionaryEntry [
-                "startcenter.desktop"
+                "clash-verge.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -187,7 +187,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "clash-verge.desktop"
+                "ca.desrt.dconf-editor.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -196,7 +196,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "ca.desrt.dconf-editor.desktop"
+                "org.gnome.SystemMonitor.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -205,7 +205,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.SystemMonitor.desktop"
+                "org.gnome.DiskUtility.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -214,7 +214,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.DiskUtility.desktop"
+                "org.gnome.Extensions.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -223,7 +223,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Extensions.desktop"
+                "org.gnome.Settings.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -232,7 +232,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Settings.desktop"
+                "org.gnome.baobab.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -241,7 +241,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.baobab.desktop"
+                "org.gnome.tweaks.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -250,7 +250,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.tweaks.desktop"
+                "discord.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -378,7 +378,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "animeko.desktop"
+                "dev.lizardbyte.app.Sunshine.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -387,7 +387,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "dev.lizardbyte.app.Sunshine.desktop"
+                "org.gnome.Connections.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -396,7 +396,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Connections.desktop"
+                "org.gnome.Calculator.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -405,7 +405,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Calculator.desktop"
+                "xterm.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -414,7 +414,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "xterm.desktop"
+                "com.github.amezin.ddterm.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -423,7 +423,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "com.github.amezin.ddterm.desktop"
+                "org.gnome.seahorse.Application.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -432,7 +432,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.seahorse.Application.desktop"
+                "org.gnome.Logs.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -441,7 +441,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Logs.desktop"
+                "org.gnome.Yelp.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -450,7 +450,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Yelp.desktop"
+                "org.gnome.Tour.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -459,7 +459,7 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "org.gnome.Tour.desktop"
+                "nixos-manual.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
@@ -468,20 +468,11 @@ with lib.hm.gvariant;
                 ])
               ])
               (mkDictionaryEntry [
-                "nixos-manual.desktop"
-                (mkVariant [
-                  (mkDictionaryEntry [
-                    "position"
-                    (mkVariant 14)
-                  ])
-                ])
-              ])
-              (mkDictionaryEntry [
                 "syncthing-ui.desktop"
                 (mkVariant [
                   (mkDictionaryEntry [
                     "position"
-                    (mkVariant 15)
+                    (mkVariant 14)
                   ])
                 ])
               ])
