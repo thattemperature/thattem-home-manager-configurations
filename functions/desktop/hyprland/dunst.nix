@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }:
+{ config, lib, ... }:
 
 {
 
@@ -54,7 +54,6 @@
             icon_position = "left";
             min_icon_size = 0;
             max_icon_size = 48;
-            icon_path = "${pkgs.morewaita-icon-theme}/share/icons/MoreWaita/48x48/status:${pkgs.morewaita-icon-theme}/share/icons/MoreWaita/48x48/devices";
 
             sticky_history = "yes";
             history_length = 20;
