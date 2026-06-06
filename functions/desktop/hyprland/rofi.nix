@@ -7,7 +7,7 @@
 
       programs.rofi = {
         enable = true;
-        package = pkgs.rofi-wayland;
+        package = pkgs.rofi;
         font = "Sarasa UI SC 14";
         theme = "Arc-Dark";
         extraConfig = {
