@@ -2,9 +2,8 @@
 
   imports = [
     ./dconf.nix
-    ./gnome
     ./gtk
-    ./tweaks.nix
+    ./hyprland
     ./xdg
   ];
 
