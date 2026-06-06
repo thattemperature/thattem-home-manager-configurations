@@ -34,15 +34,6 @@
           # ── Monitor ──
           monitor = [ ",preferred,auto,1" ];
 
-          # ── Startup ──
-          exec-once = [
-            "waybar"
-            "hyprpaper"
-            "dunst"
-            "hypridle"
-            "hyprpolkitagent"
-            "ibus-daemon -drxR"
-          ];
 
           # ── Environment ──
           env = [
@@ -216,6 +207,18 @@
           ];
 
         };
+
+        # Autostart via Lua (exec-once in settings generates invalid hl.exec-once)
+        extraConfig = ''
+          hl.on("hyprland.start", function()
+            hl.exec_cmd("waybar")
+            hl.exec_cmd("hyprpaper")
+            hl.exec_cmd("dunst")
+            hl.exec_cmd("hypridle")
+            hl.exec_cmd("hyprpolkitagent")
+            hl.exec_cmd("ibus-daemon -drxR")
+          end)
+        '';
       };
 
     }
