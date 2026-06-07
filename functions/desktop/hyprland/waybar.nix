@@ -10,6 +10,7 @@
         systemd.enable = true;
 
         settings = {
+          # ── Top bar (workspaces, clock, system tray) ──
           mainBar = {
             layer = "top";
             position = "top";
@@ -99,6 +100,61 @@
             };
 
           };
+
+          # ── Left dock (dash-to-dock replacement) ──
+          dock = {
+            layer = "top";
+            position = "left";
+            width = 48;
+            spacing = 8;
+
+            modules-top = [
+              "custom/launcher_firefox"
+              "custom/launcher_emacs"
+              "custom/launcher_discord"
+              "custom/launcher_telegram"
+              "custom/launcher_qq"
+            ];
+            modules-center = [
+              "wlr/taskbar"
+            ];
+
+            # ── Launcher buttons ──
+            "custom/launcher_firefox" = {
+              format = "";
+              on-click = "firefox";
+              tooltip = "Firefox";
+            };
+            "custom/launcher_emacs" = {
+              format = "";
+              on-click = "emacs";
+              tooltip = "Emacs";
+            };
+            "custom/launcher_discord" = {
+              format = "󰙯";
+              on-click = "discord";
+              tooltip = "Discord";
+            };
+            "custom/launcher_telegram" = {
+              format = "";
+              on-click = "telegram-desktop";
+              tooltip = "Telegram";
+            };
+            "custom/launcher_qq" = {
+              format = "󰘕";
+              on-click = "qq";
+              tooltip = "QQ";
+            };
+
+            # ── Running apps taskbar ──
+            "wlr/taskbar" = {
+              format = "{icon}";
+              icon-size = 24;
+              tooltip-format = "{title}";
+              on-click = "activate";
+              on-click-middle = "close";
+            };
+          };
         };
 
         # ── Waybar style (CSS) ──
@@ -112,11 +168,17 @@
             border-radius: 0;
           }
 
+          /* ── Top & left panels ── */
           window#waybar {
             background: rgba(251, 247, 240, 0.85);
             color: #3a3a3a;
           }
 
+          window#waybar.left {
+            background: rgba(251, 247, 240, 0.92);
+          }
+
+          /* ── Workspaces (top bar) ── */
           #workspaces button {
             padding: 0 6px;
             background: transparent;
@@ -132,6 +194,7 @@
             background: rgba(196, 167, 125, 0.2);
           }
 
+          /* ── Top bar modules ── */
           #clock {
             padding: 0 12px;
           }
@@ -142,6 +205,40 @@
 
           #cpu, #memory, #network, #idle_inhibitor {
             padding: 0 8px;
+          }
+
+          /* ── Dock (left panel) ── */
+          #custom-launcher_firefox,
+          #custom-launcher_emacs,
+          #custom-launcher_discord,
+          #custom-launcher_telegram,
+          #custom-launcher_qq {
+            font-size: 22px;
+            padding: 6px 0;
+            margin: 2px 8px;
+            border-radius: 8px;
+          }
+
+          #custom-launcher_firefox:hover,
+          #custom-launcher_emacs:hover,
+          #custom-launcher_discord:hover,
+          #custom-launcher_telegram:hover,
+          #custom-launcher_qq:hover {
+            background: rgba(196, 167, 125, 0.2);
+          }
+
+          #taskbar button {
+            padding: 4px;
+            margin: 2px 6px;
+            border-radius: 8px;
+          }
+
+          #taskbar button.active {
+            background: rgba(196, 167, 125, 0.3);
+          }
+
+          #taskbar button:hover {
+            background: rgba(196, 167, 125, 0.15);
           }
         '';
 
