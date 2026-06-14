@@ -19,6 +19,8 @@
           thattemperature-default = {
             isDefault = true;
             settings = {
+              "browser.backup.scheduled.enabled" = true;
+              "browser.backup.location" = "${config.xdg.userDirs.documents}/Restore Firefox";
               "browser.download.useDownloadDir" = false;
               "browser.startup.page" = 3;
               "media.autoplay.default" = 0;
