@@ -25,7 +25,7 @@ with lib.hm.gvariant;
             "a11y"
             "extension-list@tu.berry"
             "keyboard"
-            "appindicator-kstatusnotifieritem-tray-icon tray app main"
+            "appindicator-kstatusnotifieritem-tray-icon tray app clash-verge-rev-tray"
             "quickSettings"
           ];
         };
