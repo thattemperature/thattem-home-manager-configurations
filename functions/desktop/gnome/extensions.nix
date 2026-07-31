@@ -10,9 +10,6 @@
   config = lib.mkIf config.thattem.nixos.desktop.enable (
     lib.mkIf config.thattem.home-manager.desktop.enable {
 
-      # Workaround: disable version validation for legacy extensions
-      dconf.settings."org/gnome/shell".disable-extension-version-validation = true;
-
       programs.gnome-shell.enable = true;
       programs.gnome-shell.extensions = [
         { package = pkgs.gnomeExtensions.appindicator; }
