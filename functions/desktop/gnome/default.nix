@@ -1,15 +1,9 @@
 {
 
   imports = [
-    ./backgrounds.nix
-    ./extension-settings
+    ./dconf
     ./extensions.nix
-    ./input-sources.nix
-    ./interface.nix
-    ./keybinding
     ./packages.nix
-    ./show-apps
-    ./workspace.nix
   ];
 
 }

@@ -10,10 +10,6 @@ with lib.hm.gvariant;
     lib.mkIf config.thattem.home-manager.desktop.enable {
 
       dconf.settings = {
-        "org/gnome/mutter" = {
-          dynamic-workspaces = false;
-          workspaces-only-on-primary = false;
-        };
         "org/gnome/desktop/wm/preferences" = {
           button-layout = "appmenu:minimize,maximize,close";
           num-workspaces = 6;
