@@ -12,13 +12,16 @@ in
     lib.mkIf config.thattem.home-manager.desktop.enable {
 
       gtk.gtk3.bookmarks = [
+        "file://${home}/Desktop"
         "file://${home}/Documents"
         "file://${home}/Downloads"
         "file://${home}/Games"
         "file://${home}/Music"
         "file://${home}/Pictures"
         "file://${home}/Projects"
+        "file://${home}/Public"
         "file://${home}/Sync"
+        "file://${home}/Templates"
         "file://${home}/Videos"
       ];
     }

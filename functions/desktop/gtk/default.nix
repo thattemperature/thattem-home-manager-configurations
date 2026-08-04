@@ -5,6 +5,7 @@
   imports = [
     ./bookmarks.nix
     ./cursor.nix
+    ./font.nix
     ./icon.nix
     ./theme.nix
   ];
