@@ -12,7 +12,7 @@
 
       programs.emacs = {
         enable = true;
-        package = pkgs.emacs-pgtk;
+        package = pkgs.emacs31-pgtk;
 
         extraPackages =
           epkgs: with epkgs.thattemPackages; [
