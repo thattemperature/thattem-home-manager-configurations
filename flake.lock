@@ -7,11 +7,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1789047607,
-        "narHash": "sha256-TvkqeCjWyQvQs7jZ/2WcOWF1GMSgKtAP3qrw7eKpp1k=",
+        "lastModified": 1789482455,
+        "narHash": "sha256-pD3qVlQ4mUCFoTWrYtxecpSitQMsgJvJIN0FUIDZoEU=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "f7f333f04ff6e2f94f955642a1b4956d4fcd3010",
+        "rev": "efa3ccb4c3cc90d832eab232976379058fa75aa3",
         "type": "github"
       },
       "original": {
@@ -22,11 +22,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1789006805,
-        "narHash": "sha256-xB8mKMOx1IA9vTDNLmJZ6n4wCMq/cuWBBOzGCRnqxrU=",
+        "lastModified": 1789426278,
+        "narHash": "sha256-GnotcvKtbTMnoVx6G4E7ZdUX6487Dky74dqq3pU7iRk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "8ce4ef6cb6f871616146b9fe26d2a5ae594e94fe",
+        "rev": "efe6f071ede9d21c37462d2d6682d5e670099684",
         "type": "github"
       },
       "original": {
@@ -79,11 +79,11 @@
     },
     "thattem-nixpkgs-overlays": {
       "locked": {
-        "lastModified": 1789009070,
-        "narHash": "sha256-8EiChYPl2fOIvoYH8a9JmxrjrbWGiRMe2zar0jVX1Ao=",
+        "lastModified": 1789573212,
+        "narHash": "sha256-DmyhK4jagL72+OPrN/Tk+/g8Cs1N1tRcDmqEuzF8TzI=",
         "owner": "thattemperature",
         "repo": "thattem-nixpkgs-overlays",
-        "rev": "cc556a4df193dcc0be95208dfdfe91861104c5d7",
+        "rev": "cc32a3246995878c339e17d94cebca8285885b31",
         "type": "github"
       },
       "original": {
