@@ -18,6 +18,16 @@
         profiles = {
           thattemperature-default = {
             isDefault = true;
+            extensions = {
+              packages = with pkgs.firefoxAddons; [
+                adblock-for-youtube
+                bewlybewly
+                gesturefy
+                gnome-shell-integration
+                keepassxc-browser
+                ublock-origin
+              ];
+            };
             settings = {
               "browser.backup.scheduled.enabled" = true;
               "browser.backup.location" = "${config.xdg.userDirs.documents}/Restore Firefox";
