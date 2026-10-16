@@ -35,10 +35,11 @@
               };
             };
             settings = {
-              "browser.backup.scheduled.enabled" = true;
               "browser.backup.location" = "${config.xdg.userDirs.documents}/Restore Firefox";
+              "browser.backup.scheduled.enabled" = true;
               "browser.download.useDownloadDir" = false;
               "browser.startup.page" = 3;
+              "extensions.autoDisableScopes" = 14;
               "media.autoplay.default" = 0;
               "signon.autofillForms" = false;
               "signon.generation.enabled" = false;
