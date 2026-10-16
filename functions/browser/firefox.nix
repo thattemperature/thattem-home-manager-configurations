@@ -27,6 +27,12 @@
                 keepassxc-browser
                 ublock-origin
               ];
+              settings = {
+                "{506e023c-7f2b-40a3-8066-bc5deb40aebe}" = {
+                  force = true;
+                  settings = import ./extensions/gesturefy.nix;
+                };
+              };
             };
             settings = {
               "browser.backup.scheduled.enabled" = true;
