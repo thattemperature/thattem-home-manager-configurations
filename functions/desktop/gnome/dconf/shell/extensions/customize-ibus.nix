@@ -6,7 +6,7 @@ with lib.hm.gvariant;
 
 let
 
-  wallpapers = config.thattem.packages.wallpapers;
+  wallpapers = config.thattem.packages.wallpapers or null;
   wallpaper =
     if wallpapers != null then "${wallpapers}/share/backgrounds/thattem/BackGround-Alice.jpg" else "";
 

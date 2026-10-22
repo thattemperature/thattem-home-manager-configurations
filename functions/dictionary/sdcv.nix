@@ -7,7 +7,7 @@
 
 let
 
-  stardicts = config.thattem.packages.stardicts;
+  stardicts = config.thattem.packages.stardicts or null;
 
 in
 
