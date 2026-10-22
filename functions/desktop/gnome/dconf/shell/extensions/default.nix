@@ -11,7 +11,6 @@
     ./compiz-alike-magic-lamp-effect.nix
     ./compiz-windows-effect.nix
     ./coverflowalttab.nix
-    ./customize-ibus.nix
     ./dash-to-dock.nix
     ./ddterm.nix
     ./openbar.nix

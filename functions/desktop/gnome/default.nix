@@ -2,7 +2,7 @@
 
   imports = [
     ./dconf
-    ./extensions.nix
+    ./gnome-shell.nix
     ./packages.nix
   ];
 
