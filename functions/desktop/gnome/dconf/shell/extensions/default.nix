@@ -1,5 +1,7 @@
 # Note: these files are auto generated
 
+{ config, lib, ... }:
+
 {
 
   imports = [
@@ -18,5 +20,17 @@
     ./transparent-window-moving.nix
     ./workspaces-indicator-by-open-apps.nix
   ];
+
+  config = lib.mkIf config.thattem.nixos.desktop.enable (
+    lib.mkIf config.thattem.home-manager.desktop.enable {
+
+      dconf.settings = {
+        "org/gnome/shell" = {
+          # Workaround: disable version validation temporarily
+          disable-extension-version-validation = true;
+        };
+      };
+    }
+  );
 
 }
