@@ -13,7 +13,7 @@ with lib.hm.gvariant;
         "org/gnome/shell/extensions/dash-to-dock" = {
           always-center-icons = true;
           animation-time = mkDouble "0.3";
-          apply-custom-theme = true;
+          apply-custom-theme = false;
           apply-glossy-effect = true;
           autohide-in-fullscreen = true;
           background-color = "rgb(154,153,150)";

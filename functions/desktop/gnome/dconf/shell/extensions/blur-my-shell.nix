@@ -114,12 +114,18 @@ with lib.hm.gvariant;
               ]
             ])
           ];
+          rounded-blur-found = false;
           settings-version = 2;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
           brightness = mkDouble "0.6";
           sigma = 30;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/applications" = {
+          blur = false;
+          pipeline = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab" = {
@@ -148,8 +154,15 @@ with lib.hm.gvariant;
         "org/gnome/shell/extensions/blur-my-shell/panel" = {
           blur = false;
           brightness = mkDouble "0.6";
+          override-background = false;
           pipeline = "pipeline_default";
           sigma = 30;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/popup" = {
+          blur = false;
+          override-background = false;
+          pipeline = "pipeline_default_rounded";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/screenshot" = {
