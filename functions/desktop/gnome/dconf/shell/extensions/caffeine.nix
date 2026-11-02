@@ -17,12 +17,10 @@ with lib.hm.gvariant;
           restore-state = false;
           screen-blank = "never";
           show-indicator = "only-active";
-          show-notifications = false;
+          show-notifications = true;
           show-timer = true;
           show-toggle = true;
           trigger-apps-mode = "on-running";
-          use-custom-duration = false;
-          user-enabled = true;
         };
 
       };

@@ -24,6 +24,12 @@
             trex-enable-effect=true
             tv-animation-time=750
             tv-enable-effect=true
+            snap-animation-time=750
+            snap-scale=5
+            snap-enable-effect=true
+            team-rocket-animation-time=750
+            team-rocket-animation-split=0.4
+            team-rocket-enable-effect=true
           '';
         };
 

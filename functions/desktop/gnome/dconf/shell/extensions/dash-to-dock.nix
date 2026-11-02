@@ -40,7 +40,7 @@ with lib.hm.gvariant;
           multi-monitor = true;
           pressure-threshold = mkDouble "400.0";
           running-indicator-dominant-color = false;
-          running-indicator-style = "DEFAULT";
+          running-indicator-style = "DOTS";
           scroll-action = "switch-workspace";
           shift-click-action = "launch";
           shift-middle-click-action = "minimize";

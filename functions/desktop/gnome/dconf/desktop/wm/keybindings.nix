@@ -15,8 +15,24 @@ with lib.hm.gvariant;
           cycle-panels = [ ];
           cycle-panels-backward = [ ];
           maximize = [ ];
+          move-to-workspace-left = [
+            "<Super><Shift><Alt>Left"
+            "<Control><Shift><Alt>Left"
+          ];
+          move-to-workspace-right = [
+            "<Super><Shift><Alt>Right"
+            "<Control><Shift><Alt>Right"
+          ];
           switch-panels = [ ];
           switch-panels-backward = [ ];
+          switch-to-workspace-left = [
+            "<Super><Alt>Left"
+            "<Control><Alt>Left"
+          ];
+          switch-to-workspace-right = [
+            "<Super><Alt>Right"
+            "<Control><Alt>Right"
+          ];
           unmaximize = [ ];
         };
 
