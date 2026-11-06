@@ -12,9 +12,10 @@
 
       home.packages = with pkgs; [
         dconf2nix
+        nix-prefetch-github
+        nix-update
         nixd
         nixfmt
-        nix-prefetch-github
       ];
     }
   );
