@@ -4,7 +4,10 @@
 
   config = lib.mkIf config.thattem.home-manager.shell.enable {
 
-    programs.nushell.enable = true;
+    programs.nushell = {
+      enable = true;
+      loadSessionVariables = true;
+    };
   };
 
 }
