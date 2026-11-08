@@ -25,7 +25,7 @@ with lib.hm.gvariant;
                     (mkVariant [
                       (mkDictionaryEntry [
                         "type"
-                        (mkVariant "native_static_gaussian_blur")
+                        (mkVariant "dual_kawase_blur")
                       ])
                       (mkDictionaryEntry [
                         "id"
@@ -35,76 +35,12 @@ with lib.hm.gvariant;
                         "params"
                         (mkVariant [
                           (mkDictionaryEntry [
-                            "radius"
-                            (mkVariant 30)
-                          ])
-                          (mkDictionaryEntry [
-                            "brightness"
-                            (mkVariant (mkDouble "0.6"))
-                          ])
-                        ])
-                      ])
-                    ])
-                  ])
-                ])
-              ]
-            ])
-            (mkDictionaryEntry [
-              "pipeline_default_rounded"
-              [
-                (mkDictionaryEntry [
-                  "name"
-                  (mkVariant "Default rounded")
-                ])
-                (mkDictionaryEntry [
-                  "effects"
-                  (mkVariant [
-                    (mkVariant [
-                      (mkDictionaryEntry [
-                        "type"
-                        (mkVariant "native_static_gaussian_blur")
-                      ])
-                      (mkDictionaryEntry [
-                        "id"
-                        (mkVariant "effect_000000000001")
-                      ])
-                      (mkDictionaryEntry [
-                        "params"
-                        (mkVariant [
-                          (mkDictionaryEntry [
-                            "radius"
-                            (mkVariant 30)
-                          ])
-                          (mkDictionaryEntry [
-                            "brightness"
-                            (mkVariant 1)
-                          ])
-                          (mkDictionaryEntry [
                             "unscaled_radius"
                             (mkVariant 30)
                           ])
-                        ])
-                      ])
-                    ])
-                    (mkVariant [
-                      (mkDictionaryEntry [
-                        "type"
-                        (mkVariant "corner")
-                      ])
-                      (mkDictionaryEntry [
-                        "id"
-                        (mkVariant "effect_000000000002")
-                      ])
-                      (mkDictionaryEntry [
-                        "params"
-                        (mkVariant [
                           (mkDictionaryEntry [
-                            "radius"
-                            (mkVariant 50)
-                          ])
-                          (mkDictionaryEntry [
-                            "corners_bottom"
-                            (mkVariant true)
+                            "brightness"
+                            (mkVariant (mkDouble "0.8"))
                           ])
                         ])
                       ])
@@ -115,12 +51,12 @@ with lib.hm.gvariant;
             ])
           ];
           rounded-blur-found = false;
-          settings-version = 2;
+          settings-version = 7;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
-          brightness = mkDouble "0.6";
-          sigma = 30;
+          blur = true;
+          pipeline = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/applications" = {
@@ -134,13 +70,15 @@ with lib.hm.gvariant;
 
         "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
           blur = true;
-          brightness = mkDouble "1.0";
           override-background = true;
-          pipeline = "pipeline_default_rounded";
-          sigma = 20;
-          static-blur = true;
+          pipeline = "pipeline_default";
+          static-blur = false;
           style-dash-to-dock = 0;
           unblur-in-overview = false;
+        };
+
+        "org/gnome/shell/extensions/blur-my-shell/dash-to-panel" = {
+          blur-original-panel = false;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/lockscreen" = {
@@ -148,21 +86,22 @@ with lib.hm.gvariant;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/overview" = {
+          blur = true;
           pipeline = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/panel" = {
           blur = false;
-          brightness = mkDouble "0.6";
           override-background = false;
           pipeline = "pipeline_default";
-          sigma = 30;
+          unblur-in-overview = false;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/popup" = {
-          blur = false;
+          blur = true;
           override-background = false;
-          pipeline = "pipeline_default_rounded";
+          pipeline = "pipeline_default";
+          static-blur = false;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/screenshot" = {
@@ -170,8 +109,7 @@ with lib.hm.gvariant;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/window-list" = {
-          brightness = mkDouble "0.6";
-          sigma = 30;
+          pipeline = "pipeline_default";
         };
 
       };
