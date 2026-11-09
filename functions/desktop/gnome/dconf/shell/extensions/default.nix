@@ -26,8 +26,7 @@
 
       dconf.settings = {
         "org/gnome/shell" = {
-          # Workaround: disable version validation temporarily
-          disable-extension-version-validation = true;
+          disable-extension-version-validation = false;
         };
       };
     }
