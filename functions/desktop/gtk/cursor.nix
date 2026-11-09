@@ -11,8 +11,8 @@
     lib.mkIf config.thattem.home-manager.desktop.enable {
 
       gtk.cursorTheme = {
-        name = "Future-cursors";
-        package = pkgs.future-cursor-theme;
+        name = "phinger-cursors-light";
+        package = pkgs.phinger-cursors;
         size = 32;
       };
     }
