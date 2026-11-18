@@ -1,6 +1,8 @@
 {
 
-  # Do not change this
-  home.stateVersion = "26.05";
+  imports = [
+    ./backup.nix
+    ./version.nix
+  ];
 
 }
