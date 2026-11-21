@@ -146,27 +146,39 @@ with lib.hm.gvariant;
             ])
           ];
           rounded-blur-found = false;
-          settings-version = 8;
+          settings-version = 10;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/appfolder" = {
           blur = true;
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/applications" = {
           blur = false;
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/coverflow-alt-tab" = {
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/dash-to-dock" = {
           blur = true;
           override-background = true;
           pipeline = "pipeline_liquid_glass";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_liquid_glass";
+          pipeline-light = "pipeline_liquid_glass";
           static-blur = false;
           style-dash-to-dock = 0;
           unblur-in-overview = false;
@@ -178,17 +190,26 @@ with lib.hm.gvariant;
 
         "org/gnome/shell/extensions/blur-my-shell/lockscreen" = {
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/overview" = {
           blur = true;
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/panel" = {
           blur = false;
           override-background = false;
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
           unblur-in-overview = false;
         };
 
@@ -196,15 +217,25 @@ with lib.hm.gvariant;
           blur = true;
           override-background = false;
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
+          screenshot-corner-radius = 36;
           static-blur = false;
         };
 
         "org/gnome/shell/extensions/blur-my-shell/screenshot" = {
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
         "org/gnome/shell/extensions/blur-my-shell/window-list" = {
           pipeline = "pipeline_default";
+          pipeline-auto-mode = false;
+          pipeline-dark = "pipeline_default";
+          pipeline-light = "pipeline_default";
         };
 
       };

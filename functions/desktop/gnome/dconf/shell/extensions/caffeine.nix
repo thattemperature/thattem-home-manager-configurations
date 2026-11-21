@@ -20,6 +20,7 @@ with lib.hm.gvariant;
           show-notifications = true;
           show-timer = true;
           show-toggle = true;
+          toggle-shortcut = [ "" ];
           trigger-apps-mode = "on-running";
         };
 

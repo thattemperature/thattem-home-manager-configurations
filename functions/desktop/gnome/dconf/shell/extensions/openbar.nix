@@ -34,6 +34,7 @@ with lib.hm.gvariant;
           autotheme-refresh = false;
           balpha = mkDouble "0.85";
           bartype = "Islands";
+          bg-change = true;
           bgalpha = mkDouble "0.0";
           bgalpha-wmax = mkDouble "1.0";
           bgalpha2 = mkDouble "0.5";
@@ -129,18 +130,6 @@ with lib.hm.gvariant;
           candybar = false;
           card-hint = 10;
           corner-radius = false;
-          count1 = 363169;
-          count10 = 7727;
-          count11 = 7618;
-          count12 = 3;
-          count2 = 122332;
-          count3 = 82925;
-          count4 = 61569;
-          count5 = 57705;
-          count6 = 35850;
-          count7 = 21524;
-          count8 = 21122;
-          count9 = 18401;
           cust-margin-wmax = false;
           dark-accent-color = [
             "0"
@@ -308,64 +297,64 @@ with lib.hm.gvariant;
             "0.000"
           ];
           dark-palette1 = [
-            "40"
-            "64"
-            "83"
+            "80"
+            "75"
+            "75"
           ];
           dark-palette10 = [
-            "112"
-            "119"
-            "127"
+            "101"
+            "137"
+            "156"
           ];
           dark-palette11 = [
-            "13"
-            "27"
-            "52"
+            "192"
+            "205"
+            "214"
           ];
           dark-palette12 = [
-            "169"
-            "92"
-            "89"
+            "162"
+            "181"
+            "146"
           ];
           dark-palette2 = [
-            "125"
-            "145"
-            "160"
+            "57"
+            "92"
+            "115"
           ];
           dark-palette3 = [
-            "12"
-            "24"
-            "38"
+            "73"
+            "112"
+            "136"
           ];
           dark-palette4 = [
-            "82"
-            "106"
-            "123"
+            "143"
+            "114"
+            "85"
           ];
           dark-palette5 = [
-            "177"
-            "181"
-            "183"
+            "110"
+            "82"
+            "64"
           ];
           dark-palette6 = [
-            "92"
-            "120"
-            "141"
+            "189"
+            "155"
+            "105"
           ];
           dark-palette7 = [
-            "65"
-            "101"
-            "124"
+            "71"
+            "109"
+            "121"
           ];
           dark-palette8 = [
-            "154"
-            "172"
-            "184"
+            "42"
+            "57"
+            "71"
           ];
           dark-palette9 = [
-            "147"
-            "163"
-            "180"
+            "127"
+            "160"
+            "181"
           ];
           dark-shcolor = [
             "0.000"
@@ -396,6 +385,7 @@ with lib.hm.gvariant;
           ];
           dborder = true;
           dbradius = mkDouble "100.0";
+          default-font = "";
           destruct-color = [
             "0.75"
             "0.11"
@@ -591,64 +581,64 @@ with lib.hm.gvariant;
             "0.000"
           ];
           light-palette1 = [
-            "40"
-            "64"
-            "83"
+            "22"
+            "39"
+            "57"
           ];
           light-palette10 = [
-            "112"
-            "119"
-            "127"
+            "146"
+            "164"
+            "177"
           ];
           light-palette11 = [
-            "13"
-            "27"
-            "52"
+            "76"
+            "76"
+            "80"
           ];
           light-palette12 = [
-            "169"
-            "92"
-            "89"
+            "156"
+            "140"
+            "132"
           ];
           light-palette2 = [
-            "125"
-            "145"
-            "160"
+            "112"
+            "132"
+            "146"
           ];
           light-palette3 = [
-            "12"
-            "24"
-            "38"
+            "170"
+            "177"
+            "182"
           ];
           light-palette4 = [
-            "82"
-            "106"
-            "123"
+            "53"
+            "81"
+            "103"
           ];
           light-palette5 = [
-            "177"
-            "181"
-            "183"
+            "46"
+            "70"
+            "88"
           ];
           light-palette6 = [
-            "92"
-            "120"
-            "141"
+            "64"
+            "93"
+            "113"
           ];
           light-palette7 = [
-            "65"
-            "101"
-            "124"
+            "130"
+            "150"
+            "166"
           ];
           light-palette8 = [
-            "154"
-            "172"
-            "184"
+            "73"
+            "104"
+            "127"
           ];
           light-palette9 = [
-            "147"
-            "163"
-            "180"
+            "87"
+            "118"
+            "138"
           ];
           light-shcolor = [
             "0.000"
@@ -692,66 +682,6 @@ with lib.hm.gvariant;
           neon = true;
           neon-wmax = true;
           notif-radius = mkDouble "10.0";
-          palette1 = [
-            "40"
-            "64"
-            "83"
-          ];
-          palette10 = [
-            "112"
-            "119"
-            "127"
-          ];
-          palette11 = [
-            "13"
-            "27"
-            "52"
-          ];
-          palette12 = [
-            "169"
-            "92"
-            "89"
-          ];
-          palette2 = [
-            "125"
-            "145"
-            "160"
-          ];
-          palette3 = [
-            "12"
-            "24"
-            "38"
-          ];
-          palette4 = [
-            "82"
-            "106"
-            "123"
-          ];
-          palette5 = [
-            "177"
-            "181"
-            "183"
-          ];
-          palette6 = [
-            "92"
-            "120"
-            "141"
-          ];
-          palette7 = [
-            "65"
-            "101"
-            "124"
-          ];
-          palette8 = [
-            "154"
-            "172"
-            "184"
-          ];
-          palette9 = [
-            "147"
-            "163"
-            "180"
-          ];
           pause-reload = false;
           position = "Top";
           prominent1 = [
